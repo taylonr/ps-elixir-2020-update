@@ -1,0 +1,4 @@
+Line 1
+Line 2
+A long string, needs to be longer than 140 characters. This is to test that our filter function works. If it does, this string will not appear. If it fails, we'll see this string.
+A Third LIne

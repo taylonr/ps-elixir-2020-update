@@ -1,6 +1,6 @@
 defmodule PluralsightTweet.Tweet do
     def send(str) do
-        ExTwitter.configure(:process, [
+        ExTwitter.configure(:process,  [
             consumer_key: System.get_env("pluralsight_tweet_twitter_consumer_key"),
             consumer_secret: System.get_env("pluralsight_tweet_twitter_consumer_secret"),
             access_token: System.get_env("pluralsight_tweet_twitter_access_token"),
@@ -8,10 +8,5 @@ defmodule PluralsightTweet.Tweet do
         ])
 
         ExTwitter.update(str)
-    end
-
-    def send_random(path) do
-        PluralsightTweet.FileReader.get_strings_to_tweet(path)
-        |> send
     end
 end
